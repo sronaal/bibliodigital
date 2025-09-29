@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/libro.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="./public/img/book-open.png" alt="">
+            <h1>Biblioteca Digital</h1>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#inicio">Inicio</a>
+                    <a href="libros.html">Libros</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner">
+            <h1>Biblioteca Digital</h1>
+            <p>Explora nuestra colección completa de 8 libros digitales gratuitos</p>
+        </section>
+
+        <section class="filtros">
+            <div class="titulo-filtros">
+                <img src="./public/img/filter.png" alt="filtro">
+                <h3>Filtros y Búsqueda</h3>
+            </div>
+
+            <div class="filtros-input">
+                
+                <input type="text" placeholder="Buscar por título, autor o categoría">
+                <select name="" id="">
+                    <option value="todas">Todas</option>
+                    <option value="tecnologia">Tecnologia</option>
+                    <option value="negocios">Bienestar</option>
+                    <option value="cocina">Cocina</option>
+                    <option value="arte">Arte</option>
+                    <option value="finanzas">Finanzas</option>
+                </select>
+                <select name="" id="">
+                    <option value="a-z">Titulo A-Z</option>
+                    <option value="mas-descargados">Más descargados</option>
+                    <option value="mejor-calificados">Mejor Calificado</option>
+                    <option value="mas-recientes">Más Recientes</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="biblioteca"></section>
+
+       
+    </main>
+
+    <script src="./js/js.js"></script>
+</body>
+
+</html>
