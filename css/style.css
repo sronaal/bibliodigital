@@ -7,12 +7,10 @@
     font-family: "Poppins", sans-serif;
     list-style: none;
     text-decoration: none;
-
 }
 
-
-header{
-
+/* Header */
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -21,11 +19,10 @@ header{
     align-items: center;
     width: 100%;
     padding: 20px 100px;
+    z-index: 100;
 }
 
-
-
-header .logo{
+header .logo {
     color: #fff;
     font-size: 1em;
     font-weight: 700;
@@ -33,8 +30,7 @@ header .logo{
     letter-spacing: 2px;
 }
 
-header nav ul li  a{
-
+header nav ul li a {
     color: #fff;
     font-size: 1em;
     font-weight: 500;
@@ -43,21 +39,22 @@ header nav ul li  a{
     letter-spacing: 2px;
 }
 
-header.scroll{
+header.scroll {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: 0.5s;
-    border-bottom:  1px solid #e0e0e0;
-    color: #000;   
+    border-bottom: 1px solid #e0e0e0;
+    color: #000;
 }
 
-header.scroll .logo, header.scroll nav ul li a{
+header.scroll .logo,
+header.scroll nav ul li a {
     color: #000;
     transition: 0.5s;
 }
 
+/* Hero */
 main .hero {
-    
     height: 70vh;
     width: 100%;
     color: #fff;
@@ -70,14 +67,10 @@ main .hero {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
-  
     text-align: center;
 }
 
-
-main .hero h1{
-
+main .hero h1 {
     font-size: 3rem;
     margin-top: 40px;
     margin-bottom: 30px;
@@ -86,9 +79,8 @@ main .hero h1{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.10);
 }
 
-main .hero p{
-
-    font-size: 1.2rem;;
+main .hero p {
+    font-size: 1.2rem;
     margin-bottom: 20px;
     font-weight: 300;
     letter-spacing: 2px;
@@ -97,47 +89,34 @@ main .hero p{
     line-height: 1.5;
 }
 
-main .hero .buttons{
+main .hero .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;  
-
+    gap: 20px;
 }
 
-main .hero .buttons a{
-
+main .hero .buttons a {
     padding: 10px 30px;
     font-size: 1rem;
 }
 
-
-
-main .hero .buttons a:first-child{
+main .hero .buttons a:first-child {
     background-color: #fff;
     color: #000;
     border-radius: 10px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
-    
 }
 
-main .hero .buttons a:first-child:hover{
+main .hero .buttons a:first-child:hover {
     background-color: #b0b0b0;
     transition: 0.5s;
     cursor: pointer;
 }
 
-
-main .hero .buttons a:last-child:hover{
-    background-color: #2c0d03;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-
-main .hero .buttons a:last-child{
+main .hero .buttons a:last-child {
     background-color: #080200;
     color: #fff;
     border: 1px solid #fff;
@@ -147,112 +126,201 @@ main .hero .buttons a:last-child{
     letter-spacing: 1px;
 }
 
-main .libros-destacados{
-
-    height: 100vh;
-    width: 100%;
-    padding: 0 70px;;
-    background-color: #e1e1e1;
-
+main .hero .buttons a:last-child:hover {
+    background-color: #2c0d03;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
-main .libros-destacados h2{
+/* Libros Destacados */
+main .libros-destacados {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #e1e1e1;
+}
 
+main .libros-destacados h2 {
     font-size: 2.2rem;
     text-align: center;
-    padding: 50px 0;
+    padding-bottom: 10px;
     font-weight: 500;
     letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
-main .libros-destacados p{
+main .libros-destacados p {
     text-align: center;
     font-size: 1.2rem;
     color: #757575;
+    margin-bottom: 40px;
 }
 
+main .libros-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main .libros-container .card-libro {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 250px; /* crece o se reduce según espacio */
+    max-width: 300px; /* ancho máximo */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+main .libros-container .card-libro img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+main .libros-container .card-libro .categoria-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+main .libros-container .card-libro .categoria-rating .categoria {
+    background-color: #626262;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+main .libros-container .card-libro .info-libro h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+main .libros-container .card-libro .info-libro h4 {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+main .libros-container .card-libro .info-libro .info-autor {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+main .libros-container .card-libro .info-libro .descargas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+main .libros-container .card-libro .info-libro .descargas p {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+main .libros-container .card-libro .info-libro .descargas button {
+
+    padding: 8px 16px;
+    background: #080200;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+main .libros-container .card-libro .info-libro .descargas a:hover,
+main .libros-container .card-libro .info-libro .descargas button:hover {
+    background: #2c0d03;
+    cursor: pointer;
+}
+
+
+
 @media (max-width: 640px) {
-
     header {
-
         flex-direction: column;
         text-align: center;
         padding: 20px 20px;
     }
-    
-    header .logo{
 
+    header .logo {
         margin-bottom: 20px;
         font-size: 1em;
     }
 
-    main .hero{
-
+    main .hero {
         height: 100vh;
-        padding: 0 20px;
-        padding: 20px 20px;
+        padding: 20px;
     }
 
-    main .hero h1{
-
+    main .hero h1 {
         font-size: 2rem;
         margin-top: 20px;
         margin-bottom: 40px;
     }
-    
-    main .hero p{
 
+    main .hero p {
         font-size: 1rem;
         margin-bottom: 40px;
     }
-    main .hero .buttons{
 
-        
+    main .hero .buttons {
         gap: 10px;
     }
-
 }
 
-
 @media (min-width: 641px) and (max-width: 1024px) {
-
     header {
-
         flex-direction: column;
         text-align: center;
         padding: 20px 20px;
     }
-    
-    header .logo{
 
+    header .logo {
         margin-bottom: 20px;
         font-size: 1em;
     }
 
-    main .hero{
-
+    main .hero {
         height: 100vh;
-        padding: 0 20px;
-        padding: 20px 20px;
+        padding: 20px;
     }
 
-    main .hero h1{
-
+    main .hero h1 {
         font-size: 2.5rem;
         margin-top: 20px;
         margin-bottom: 30px;
     }
-    
-    main .hero p{
 
+    main .hero p {
         font-size: 1.1rem;
         margin-bottom: 30px;
     }
-    main .hero .buttons{
 
-        
+    main .hero .buttons {
         gap: 15px;
     }
 }
-
-

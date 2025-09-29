@@ -6,9 +6,6 @@ window.addEventListener('scroll', () => {
         header.classList.add('scroll')
     }
 
-    if (window.scrollY > 10) {
-        titleMenu.classList.add('animate__backInDown')
-    }
 
     else {
         header.classList.remove('scroll')
