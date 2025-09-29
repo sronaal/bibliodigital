@@ -1,8 +1,8 @@
+/* Import de fuente al inicio */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-*{
-
+/* Reset y base */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,8 +11,8 @@
     text-decoration: none;
 }
 
-header{
-
+/* Header */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +27,7 @@ header{
     background-color: #fff;
 }
 
-header .logo{
+header .logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,142 +35,162 @@ header .logo{
     font-size: 1em;
 }
 
-header nav ul li  {
-
+header nav ul li {
     display: flex;
     gap: 30px;
 }
 
-header nav ul li a{
-
+header nav ul li a {
     color: #000;
     font-size: 1em;
     font-weight: 500;
-    margin-left: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
+/* Main */
 main {
-
-    margin-top: 20px 0;
-    padding: 100px;
+    margin: 0;
+    padding-top: 120px; /* espacio para header fijo */
+    padding-left: 50px;
+    padding-right: 50px;
     min-height: 100vh;
     background: #f5f5f5;
-    
 }
 
-main .banner h1{
-
+/* Banner */
+main .banner h1 {
     margin-top: 30px;
     font-size: 2.5em;
     color: #333;
     text-align: center;
-
 }
 
-main .banner p{
-
+main .banner p {
     margin: 10px 0;
     font-size: 1.2em;
     color: #666;
     text-align: center;
 }
 
+/* Filtros */
 main .filtros {
-    
     border: 1px solid #ccc;
     border-radius: 10px;
-    padding: 20px 20px;    
+    padding: 20px;    
+    margin-top: 40px;
+    background: #fff;
 }
 
-main .filtros .titulo-filtros{
-
+main .filtros .titulo-filtros {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 main .filtros .filtros-input {
-
     padding: 20px 0;
-    margin: 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-main .filtros input,select {
-
+main .filtros input,
+main .filtros select {
     padding: 10px;
     width: 325px;
     border-radius: 5px;
     border: 1px solid rgb(204, 204, 204);
 }
 
-main .biblioteca{
-
+/* Biblioteca */
+main .biblioteca {
     display: flex;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 30px;
     margin-top: 40px;
+    justify-content: center;
 }
 
-main .biblioteca .libro{
-
+/* Cards de libros */
+main .biblioteca .libro {
+    flex-shrink: 0;
     width: 340px;
-    height: 590px;
     background-color: #ffffff;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+/* Imagen del libro */
 main .biblioteca .libro img {
     width: 100%;
-    height: 60%;
-    
+    height: 200px; /* altura fija para uniformidad */
+    object-fit: cover;
+    border-radius: 5px;
 }
 
-main .biblioteca .libro .info-libro{
-
-    margin-top: 20px;
-    padding: 0 20px;
+/* Info del libro */
+main .biblioteca .libro .info-libro {
+    margin-top: 15px;
+    padding: 0 5px;
 }
 
-main .biblioteca .libro .info-libro span p{
-
+main .biblioteca .libro .info-libro .categoria p {
     display: inline-block;
     color: #fff;
     background-color: #a6a6a6;
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 5px;    
+    font-size: 0.9em;
 }
 
-main .biblioteca .libro .info-libro h4{
-
+main .biblioteca .libro .info-libro h4 {
     font-size: 1.3em;
-    margin-bottom: 5px;
+    margin: 10px 0 5px 0;
+    color: #333;
 }
 
-main .biblioteca .libro .info-libro p{
-
-    font-size: 14px;
-    color: #ccc;
+main .biblioteca .libro .info-libro p {
+    font-size: 0.95em;
+    color: #666;
     margin-bottom: 10px;
 }
 
+/* Calificaciones y autor */
 main .biblioteca .libro .calificaciones-autor {
-
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
-    margin-bottom: 10px;
+    align-items: center;
+    padding: 0 5px;
+    margin-bottom: 15px;
 }
 
-main .biblioteca .libro  a{
+main .biblioteca .libro .calificaciones-autor h5 {
+    font-size: 1em;
+    color: #333;
+}
 
+main .biblioteca .libro .calificaciones-autor p {
+    font-size: 0.95em;
+    color: #ff9900;
+}
 
+/* Botón Descargar */
+main .biblioteca .libro a {
+    display: block;
+    text-align: center;
     background-color: #a6a6a6;
     color: #fff;
     border-radius: 5px;
-    padding: 10px;
-    margin: 20px;
+    padding: 10px 0;
+    margin: 10px 5px 0 5px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+main .biblioteca .libro a:hover {
+    background-color: #888;
 }
