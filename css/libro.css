@@ -104,3 +104,73 @@ main .filtros input,select {
     border-radius: 5px;
     border: 1px solid rgb(204, 204, 204);
 }
+
+main .biblioteca{
+
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+main .biblioteca .libro{
+
+    width: 340px;
+    height: 590px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+}
+
+main .biblioteca .libro img {
+    width: 100%;
+    height: 60%;
+    
+}
+
+main .biblioteca .libro .info-libro{
+
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+main .biblioteca .libro .info-libro span p{
+
+    display: inline-block;
+    color: #fff;
+    background-color: #a6a6a6;
+    padding: 5px;
+    border-radius: 5px;    
+}
+
+main .biblioteca .libro .info-libro h4{
+
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+main .biblioteca .libro .info-libro p{
+
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+main .biblioteca .libro .calificaciones-autor {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+main .biblioteca .libro  a{
+
+
+    background-color: #a6a6a6;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+}
