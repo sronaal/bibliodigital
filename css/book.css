@@ -23,7 +23,7 @@ header {
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid #e0e0e0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #fff;
 }
 
@@ -44,14 +44,14 @@ header nav ul li a {
     color: #000;
     font-size: 1em;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    margin-left: 10px
 }
 
 /* Main */
 main {
     margin: 0;
-    padding-top: 120px; /* espacio para header fijo */
+    padding-top: 120px;
+    /* espacio para header fijo */
     padding-left: 50px;
     padding-right: 50px;
     min-height: 100vh;
@@ -77,7 +77,7 @@ main .banner p {
 main .filtros {
     border: 1px solid #ccc;
     border-radius: 10px;
-    padding: 20px;    
+    padding: 20px;
     margin-top: 40px;
     background: #fff;
 }
@@ -91,6 +91,7 @@ main .filtros .titulo-filtros {
 main .filtros .filtros-input {
     padding: 20px 0;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -118,7 +119,7 @@ main .biblioteca .libro {
     width: 340px;
     background-color: #ffffff;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -127,7 +128,8 @@ main .biblioteca .libro {
 /* Imagen del libro */
 main .biblioteca .libro img {
     width: 100%;
-    height: 200px; /* altura fija para uniformidad */
+    height: 200px;
+    /* altura fija para uniformidad */
     object-fit: cover;
     border-radius: 5px;
 }
@@ -143,7 +145,7 @@ main .biblioteca .libro .info-libro .categoria p {
     color: #fff;
     background-color: #a6a6a6;
     padding: 5px 10px;
-    border-radius: 5px;    
+    border-radius: 5px;
     font-size: 0.9em;
 }
 
@@ -193,4 +195,32 @@ main .biblioteca .libro a {
 
 main .biblioteca .libro a:hover {
     background-color: #888;
+}
+
+@media (max-width: 640px) {
+
+    header .logo h1 {
+
+        font-size: 26px;
+    }
+
+    header {
+
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+
+    main .filtros input,
+    main .filtros select {
+        width: 100%;
+    }
+
+    header .logo h1 {
+
+        font-size: 26px;
+    }
 }
